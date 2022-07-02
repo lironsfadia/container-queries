@@ -1,38 +1,64 @@
-.App {
-  text-align: center;
+@import url(https://fonts.googleapis.com/css2?family=Bungee+Spice);
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Josefin+Sans:wght@700&family=Kdam+Thmor+Pro&family=Merriweather:ital,wght@0,400;1,900&display=swap');
+
+@font-palette-values --colorized {
+  font-family: "Bungee Spice";
+  base-palette: 0;
+  override-colors: 0 #613B6F, 1 #8DAC50, 2 #FBFBFB;        
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  font-family: "Bungee Spice";
+  font-size: 2em;
+  font-palette: --colorized;
+  color: #e67900;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+img {
+  width: 150px;
+  height: 150px;
+}
+
+p {
+  font-family: 'Kdam Thmor Pro', sans-serif;
+  font-size: 1em;
+}
+
+.card-container {
+  container-type: inline-size / liron;
+  overflow: auto;
+  resize:horizontal;
+}
+
+.buzz-card {
+  border: 2px solid;
+  border-radius: 10px;
+  padding: 10px 10px 10px 10px;
+}
+
+.buzz-card p {
+  display: none;
+}
+
+@container (inline-size > 274px){
+  .buzz-card p{
+    display: block;
+  }
+  img {
+    width: 200px;
+    height: 200px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@container (inline-size > 400px){
+  .buzz-card{
+    display: grid;
   }
-  to {
-    transform: rotate(360deg);
+  .buzz-card img {
+    grid-row: 2/4;
+  }
+
+  .buzz-card h1{
+    grid-column: 1/3;
   }
 }
