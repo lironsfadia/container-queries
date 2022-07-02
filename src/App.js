@@ -1,5 +1,5 @@
 import './App.css';
-import logo from './lightyear.jpeg';
+import logo from './assets/lightyear.jpeg';
 
 
 function App() {

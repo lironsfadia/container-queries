@@ -25,7 +25,7 @@ p {
 }
 
 .card-container {
-  container-type: inline-size / liron;
+  container-type: inline-size;
   overflow: auto;
   resize:horizontal;
 }
